@@ -1,14 +1,14 @@
-var http = require('http'),
-    fs = require('fs');
+var express = require('express');
+var app = express();
 
+app.set('port', (process.env.PORT || 5000));
 
-fs.readFile('./resume.html', function (err, html) {
-    if (err) {
-        throw err; 
-    }       
-    http.createServer(function(request, response) {  
-        response.writeHeader(200, {"Content-Type": "text/html"});  
-        response.write(html);  
-        response.end();  
-    }).listen(8000);
+app.set('view engine', 'ejs');
+
+app.get('/', function(request, response){
+      response.render('resume.ejs');
+});
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
