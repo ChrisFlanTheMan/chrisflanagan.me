@@ -1,0 +1,29 @@
+#pageContent .resume_content a {
+    text-decoration:underline;
+}
+
+#pageContent {
+    margin: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    padding-bottom: 55px;
+}
+
+#wrapper {
+    width: 930px;
+}
+
+#pageContent .resume_content {
+    padding-left: 0;
+    margin-top: -29px;
+}
+
+#pageContent .links {
+    position: absolute;
+    z-index: 1;
+    font-size: 14px;
+    top: 6px;
+    right: 5px;
+    text-align: right;
+    font-family: 'Roboto Condensed', sans-serif;
+}
