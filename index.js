@@ -3,8 +3,6 @@ var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-app.set('view engine', 'ejs');
-
 app.get('/', function(request, response){
       response.render('resume.ejs');
 });
