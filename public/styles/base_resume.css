@@ -17,13 +17,13 @@ html body * {
 
 .resume_content * {
     font-family: 'Source Sans Pro', sans-serif !important;
-    color: #444 !important;
+    color: #444;
     font-size: 16px;
 }
 
 .resume_content a {
     text-decoration:underline;
-    color: #0f4a00 !important;
+    color: #0f4a00;
 }
 
 .resume_content #resume {
