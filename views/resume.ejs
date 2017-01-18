@@ -43,20 +43,22 @@ body {
     position:fixed;
     top:0;
     left:0;
-    height:100%;
+    width:100%;
     font-size: 24px;
     z-index: 100;
 
-    -moz-box-shadow: 0px 8px 8px 0px #777;
-    -webkit-box-shadow: 0px 1px 8px 0px #777;
-    -o-box-shadow: 0px 1px 8px 0px #777;
-    box-shadow: 0px 1px 8px 0px #777;
+    border-bottom: 2px solid #f1f1f1;
+
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+    -o-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
 
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 #navBar, #navSpacing {
-    width: 200px;
+    height: 45px;
 }
 
 #navBar a
@@ -79,11 +81,12 @@ body {
 }
 
 #navBar > ul {
-    height: 800px;
+    width: 1100px;
 }
 
 #navBar li
 {
+    float: left;
     margin-right: 5px;
 }
 
@@ -98,26 +101,15 @@ body {
 }
 
 #navBar li li a {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+ 
 }
 
 #navBar > ul > li > div {
-    -webkit-transition: all 0.1s ease;
-    -moz-transition: all 0.1s ease;
-    -o-transition: all 0.1s ease;
-    -ms-transition: all 0.1s ease;
-    transition: all 0.1s ease;
+ 
 }
 
 #navBar > ul > li:hover > div, #navBar > ul:not(:hover) > li.selected > div {
-    transition-duration: 0.1s;
-    transform:scale(1);
-    -ms-transform:scale(1); /* IE 9 */
-    -moz-transform:scale(1); /* Firefox */
-    -webkit-transform:scale(1); /* Safari and Chrome */
-    -o-transform:scale(1); /* Opera */
+
 }
 
 #navBar > ul > li:hover > div a {
@@ -126,23 +118,10 @@ body {
 #navBar li li {
     position: relative;
     z-index: 1;
-
-    -webkit-transition: all 0.1s ease;
-    -moz-transition: all 0.1s ease;
-    -o-transition: all 0.1s ease;
-    -ms-transition: all 0.1s ease;
-    transition: all 0.1s ease;
 }
 
 #navBar li li:hover {
     z-index: 2;
-
-    transition-duration: 0.1s;
-    transform:scale(1.1);
-    -ms-transform:scale(1.1); /* IE 9 */
-    -moz-transform:scale(1.1); /* Firefox */
-    -webkit-transform:scale(1.1); /* Safari and Chrome */
-    -o-transform:scale(1.1); /* Opera */
 
     //-moz-box-shadow: 0px 4px 8px 0px #111;
     //-webkit-box-shadow: 0px 4px 8px 0px #111;
@@ -150,31 +129,14 @@ body {
     //box-shadow: 0px 4px 8px 0px #111;
 }
 
-#navBar li:hover > a, #navBar li:hover > div > a, #navBar li.selected > a, #navBar ul:not(:hover) li.selected > div > a
-{
-    background: #0f4a00;
-    color: #FFF;
-}
-
 #navBar li ul
 {
     pointer-events: none;
     opacity: 0;
-    transform-origin: top left;
-    transform: scale(0);
-
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    transition: all 0.2s ease;
 
     position: absolute;
     padding: 0;
     background-color:#FFF;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
 
     -moz-box-shadow: 0px 1px 8px 0px #555;
     -webkit-box-shadow: 0px 1px 8px 0px #555;
@@ -213,10 +175,18 @@ body {
     padding-bottom:1px;
     background: #FFF;
 
-    -moz-box-shadow: 0px 1px 8px 0px #555;
+    border-left: 2px solid #f1f1f1;
+    border-right: 2px solid #f1f1f1;    
+
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+    -o-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+
+    /*-moz-box-shadow: 0px 1px 8px 0px #555;
     -webkit-box-shadow: 0px 1px 8px 0px #555;
     -o-box-shadow: 0px 1px 8px 0px #555;
-    box-shadow: 0px 1px 8px 0px #555;
+    box-shadow: 0px 1px 8px 0px #555;*/
 }
 
 #pageContent {
@@ -274,8 +244,7 @@ a {
 }
 
 a:hover {
-    color: #F22;
-    text-shadow: 0 0 2px #F87, 0 0 2px #F87;
+    color: #02adea !important;
 }
 
 html .button {
@@ -368,15 +337,26 @@ hr {
     padding: 0; 
 }
 </style>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway|Roboto Condensed"></link>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"></link>
     <title>Resume &#124; chrisflanagan.me</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto Condensed" rel="stylesheet" type="text/css"></link>
     <link rel="stylesheet" type="text/css" href="styles/resume.css"></link>
     <link rel="stylesheet" type="text/css" href="styles/base_resume.css"></link>
 </head>
 
-<body background="images/confectionary.jpg">
-    <<div id="wrapper"><div id="navSpacing"></div>
+ <!--Background pattern from subtlepatterns.com -->
+<body background="images/crossword.png">
+    <div id="navBar">
+        <ul>
+            <li>
+                <div><a href="/">Home</a></div>
+            </li>
+            <li class="selected">
+                <div><a href="/Resume/">Resume</a></div>
+            </li>
+        </ul>
+    </div>    
+    <div id="wrapper"><div id="navSpacing"></div>
     <div id="pageContent" class="textsection">
         <div class="links"><div><a href="/MuseumOfResumes"></a></div>
         <div><a href="/files/Resume.pdf"></a></div>
@@ -435,7 +415,7 @@ hr {
                                                 San Francisco, California</div>
                                             <div>
                                                 <div class="image_container loading"><img src="images/calendar_icon.svg" alt="date" title="date" onload="this.parentNode.classList.remove('loading')"></img></div>
-                                                Jan. 2015 - Aug. 2015</div>
+                                                Jan - Aug. 2015</div>
                                             <div>
                                                 <div class="image_container loading"><img src="images/lang_icon.svg" alt="language(s)" title="language(s)" onload="this.parentNode.classList.remove('loading')"></img></div>
                                                 C++, Python, Actionscript</div>
@@ -472,7 +452,7 @@ hr {
                                             Vancouver, BC</div>
                                         <div>
                                             <div class="image_container loading"><img src="images/calendar_icon.svg" alt="date" title="date" onload="this.parentNode.classList.remove('loading')"></img></div>
-                                            Sept. 2013 - Dec. 2013, May 2014 - Aug. 2014</div>
+                                            Sept - Dec. 2013, May - Aug. 2014</div>
                                         <div>
                                             <div class="image_container loading"><img src="images/lang_icon.svg" alt="language(s)" title="language(s)" onload="this.parentNode.classList.remove('loading')"></img></div>
                                             C#, Javascript, Html</div>
@@ -516,20 +496,15 @@ hr {
                                     </div>
                             </div>
                         </div>
-                            <div class="section" id="school_section"><h2>School</h2>
-                                <div class="section_content"><p>Bachelors of Computer Science - University of Waterloo</p></div></div></div></div></div></div></div>
-        <div id="navBar">
-            <ul>
-                <li>
-                    <div><a href="/">Home</a></div>
-                </li>
-                <li>
-                    <div><a href="/Projects/">Projects</a></div>
-                </li>
-                <li class="selected">
-                    <div><a href="/Resume/">Resume</a></div>
-                </li>
-            </ul>
+                        <div class="section" id="school_section"><h2>School</h2>
+                            <div class="section_content"><p>Bachelors of Computer Science - University of Waterloo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+
 <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100919464ns.gif" /></p></noscript> 
 </body></html>
