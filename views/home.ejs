@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+html {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    overflow-y: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
+html body * {
+    max-height: 999999px;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1.title {
+    text-align:center;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+} 
+
+body {
+    background-color: #FFF;
+}
+
+#navBar {
+    background: #FFF;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    font-size: 24px;
+    z-index: 100;
+
+    border-bottom: 2px solid #f1f1f1;
+
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+    -o-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#navBar, #navSpacing {
+    height: 45px;
+}
+
+#navBar a
+{
+    text-decoration: none;
+    color: #333;
+}
+
+#navBar ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 5px auto 8px auto;
+}
+
+#navBar ul ul {
+    margin-top: 7px;
+    margin-left: -10px;
+    font-size: 18px;
+}
+
+#navBar > ul {
+    width: 1100px;
+}
+
+#navBar li
+{
+    float: left;
+    margin-right: 5px;
+}
+
+#navBar li a {
+    display: block;
+    background-color: transparent;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 6px 10px 8px 10px;
+    margin-top: -3px;
+}
+
+#navBar li li a {
+ 
+}
+
+#navBar > ul > li > div {
+ 
+}
+
+#navBar > ul > li:hover > div, #navBar > ul:not(:hover) > li.selected > div {
+
+}
+
+#navBar > ul > li:hover > div a {
+}
+
+#navBar li li {
+    position: relative;
+    z-index: 1;
+}
+
+#navBar li li:hover {
+    z-index: 2;
+
+    //-moz-box-shadow: 0px 4px 8px 0px #111;
+    //-webkit-box-shadow: 0px 4px 8px 0px #111;
+    //-o-box-shadow: 0px 4px 8px 0px #111;
+    //box-shadow: 0px 4px 8px 0px #111;
+}
+
+#navBar li ul
+{
+    pointer-events: none;
+    opacity: 0;
+
+    position: absolute;
+    padding: 0;
+    background-color:#FFF;
+
+    -moz-box-shadow: 0px 1px 8px 0px #555;
+    -webkit-box-shadow: 0px 1px 8px 0px #555;
+    -o-box-shadow: 0px 1px 8px 0px #555;
+    box-shadow: 0px 1px 8px 0px #555;
+}
+
+#navBar li:hover ul
+{
+    pointer-events: all;
+    opacity: 1;
+    transform: scale(1);
+}
+
+#navBar li li
+{
+    margin: 0;
+    float: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#navBar li li a
+{
+    background: #FFF;
+}
+
+#wrapper {
+    overflow: hidden;
+    position:relative;
+    margin: auto;
+    margin-top: -1px;
+    width:800px;
+    min-height:100%;
+    padding-bottom:1px;
+    background: #FFF;
+
+    border-left: 2px solid #f1f1f1;
+    border-right: 2px solid #f1f1f1;    
+
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+    -o-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+
+    /*-moz-box-shadow: 0px 1px 8px 0px #555;
+    -webkit-box-shadow: 0px 1px 8px 0px #555;
+    -o-box-shadow: 0px 1px 8px 0px #555;
+    box-shadow: 0px 1px 8px 0px #555;*/
+}
+
+#pageContent {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    position: relative;
+}
+
+#pageContent p.noindent {
+  text-indent: 0;
+}
+
+.textsection {
+    color: #333;
+}
+
+#footseperator {
+    width: 100%;
+    height: 20px;
+    background-color: #333;
+    margin-bottom: 5px;
+    box-shadow: #AAA 0px 5px 10px;
+}
+
+#footer {
+    position: absolute;
+    bottom:0;
+    background: #FFF;
+    width:100%;
+    height:25px;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+#footer p {
+    font-size: 14px;
+}
+
+p {
+    margin: 0;
+    line-height: 24px;
+}
+
+a {
+    color: #2ec866;
+
+    -webkit-transition: text-shadow 0.2s ease, color 0.2s ease;
+    -moz-transition: text-shadow 0.2s ease, color 0.2s ease;
+    -o-transition: text-shadow 0.2s ease, color 0.2s ease;
+    -ms-transition: text-shadow 0.2s ease, color 0.2s ease;
+    transition: text-shadow 0.2s ease, color 0.2s ease;
+}
+
+a:hover {
+    color: #02adea !important;
+}
+
+html .button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #FFF;
+    color: #333;
+
+    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -ms-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+
+    -moz-box-shadow: 0px 1px 4px 0px #777;
+    -webkit-box-shadow: 0px 1px 4px 0px #777;
+    -o-box-shadow: 0px 1px 4px 0px #777;
+    box-shadow: 0px 1px 4px 0px #777;
+}
+
+html .button:hover {
+    background-color: #F00;
+    color: #FFF;
+
+    transition-duration: 0.1s;
+    transform:scale(1.1);
+    -ms-transform:scale(1.1); /* IE 9 */
+    -moz-transform:scale(1.1); /* Firefox */
+    -webkit-transform:scale(1.1); /* Safari and Chrome */
+    -o-transform:scale(1.1); /* Opera */
+}
+
+img {
+    opacity: 1;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.loading img {
+    opacity: 0;
+}
+
+/* Loading spinner taken from here: http://stephanwagner.me/only-css-loading-spinner */
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes spinner {
+    to {-webkit-transform: rotate(360deg);}
+}
+
+.loading {
+    min-width: 24px;
+    min-height: 24px;
+    position: relative;
+}
+
+.loading:before {
+    content: 'Loading';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.loading:not(:required):before {
+    content: '';
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, .3);
+    border-top-color: rgba(0, 0, 0, .6);
+    animation: spinner .6s linear infinite;
+    -webkit-animation: spinner .6s linear infinite;
+}
+
+hr {
+    margin-top: 0;
+
+    display: block; height: 1px;
+    border: 0; border-top: 2px solid #F22;
+    padding: 0; 
+}
+
+</style>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"></link>
+    <title>Home &#124; chrisflanagan.me</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto Condensed" rel="stylesheet" type="text/css"></link>
+    <link rel="stylesheet" type="text/css" href="styles/index.css"></link>
+</head>
+<body background="images/crossword.png">
+    <div id="navBar">
+        <ul>
+            <li>
+                <div><a href="/">Home</a></div>
+            </li>
+            <li class="selected">
+                <div><a href="/resume">Resume</a></div>
+            </li>
+        </ul>
+    </div>    
+    <div id="wrapper">
+        <div id="navSpacing"></div>
+        	<div id="pageContent" class="textsection">
+	        <p class="first">
+				Welcome to my personal website! My name is Chris Flanagan and I'm a new grad from the Computer Science program at the University of Waterloo. I'm currently looking for a job in a major North American city. 
+			</p>
+
+			<p>	
+			I love watching new and old highly acclaimed films and tv series. I love going on random adventures with new people and finding the hidden treasures of any city I live in. I've taken some ballroom dance in the past and absolutely love to dance. I love to spend a night in enjoying rum or whiskey, new music and board games with friends. I'm a huge gamer who is always pushes himself to play better. And Ramen is easily my favourite food on the entire planet. 
+			</p>
+
+			<p class="noindent">
+				If you've got any questions for me or just want to chat, I'm always reachable at                            
+				 <a href="mailto:crflanag@gmail.com">crflanag@gmail.com</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
+

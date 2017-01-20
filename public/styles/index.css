@@ -1,0 +1,26 @@
+#pageContent.textsection {
+  margin-top: 0px;
+}
+
+#pageContent p.first {
+  margin-top: 20px;
+}
+
+#pageContent p {
+  margin: 10px 20px;
+  margin-bottom: 20px;
+  text-indent: 40px;
+}
+
+#pageContent .image_container {
+    float: right;
+    margin: 18px;
+    margin-left: 20px;
+    margin-top: -6px;
+    margin-bottom: 12px;
+}
+
+#pageContent .image_container img {
+    border-radius: 10px;
+    max-width: 200px;
+}
