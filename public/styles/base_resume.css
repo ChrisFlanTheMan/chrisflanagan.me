@@ -23,7 +23,7 @@ html body * {
 
 .resume_content a {
     text-decoration:underline;
-    color: #2ec866;
+    color: #008c33;
 }
 
 .resume_content #resume {
@@ -173,7 +173,7 @@ html body * {
   bottom: 18px;
   margin-left: 10px;
   width: 100%;
-  border-top: 2px solid #2ec866;
+  border-top: 2px solid #008c33;
 }
 
 .inner_content li, .right_info div {
