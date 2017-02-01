@@ -18,6 +18,10 @@ router.get('/resume', function(request, response){
       response.render('resume.ejs');
 });
 
+router.get('/base_resume', function(request, response){
+      response.render('base_resume.ejs');
+});
+
 app.use('/', router);
 
 app.listen(app.get('port'), function() {
