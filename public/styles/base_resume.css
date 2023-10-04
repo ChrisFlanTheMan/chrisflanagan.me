@@ -69,13 +69,17 @@ html body * {
     padding-bottom: 0 !important;
 }
 
-.resume_content h2, .resume_content h3 {
+.resume_content h2, .resume_content h3, h4 {
     margin-bottom: 0;
     margin-top: 0;
 }
 
 .resume_content h3 {
     font-size: 24px;
+}
+
+.resume_content h4 {
+    font-size: 20px;
 }
 
 .resume_content .section .section_content {
@@ -107,7 +111,7 @@ html body * {
 .resume_content .subsection .inner_content {
     width: 600px;
     display: inline-block;
-    margin-left: 4px;
+    margin-left: 8px;
 }
 
 .resume_content .subsection .right_info {
@@ -126,7 +130,7 @@ html body * {
     position:relative;
 }
 
-.resume_content h1, .resume_content h2, .resume_content h3 {
+.resume_content h1, .resume_content h2, .resume_content h3, .resume_content h4 {
     font-family: 'Oswald', sans-serif !important;
 
     /* hack that fixes a rendering bug with wkhtmltopdf */
